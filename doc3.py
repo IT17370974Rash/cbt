@@ -1,6 +1,6 @@
 training_doc3 = """Getbreakfastalone Getbreakfastwithfamily WatchTValone WatchTVwithfamilymembers
 Listeningsongs
-Talkwithfrienonphone
+Talkwithfriendonphone
 Chatwithfriendonphone
 Tryanewrecipe
 Readabookamagazineoranewspaper

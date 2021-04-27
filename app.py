@@ -13,6 +13,7 @@ import nltk
 # nltk.download('punkt')
 from nltk.tokenize import word_tokenize
 from tensorflow.keras.utils import to_categorical
+from actvity import act_list
 
 app = Flask(__name__)
 
@@ -56,7 +57,8 @@ def home():
         pad_encoded = pad_sequences([encoded_text], maxlen=4, truncating='pre')
         #print(encoded_text, pad_encoded)
         for i in (model.predict(pad_encoded)[0]).argsort()[-6:][::-1]:
-            pred_word = tokenizer.index_word[i]
+            # pred_word = tokenizer.index_word[i]
+            pred_word = act_list[i+1]
             activity_list.append(pred_word)
             ##print("Next activity suggestion:",pred_word)
 

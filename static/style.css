@@ -14,7 +14,7 @@ input[type=text] {
   }
 
   body {
-    background-color: black;
+    background-color: burlywood;
   }
 
   div.container {
@@ -35,5 +35,5 @@ input[type=text] {
   }
 
   h1.result {
-    text-align: center;
+    text-align: left;
   }
