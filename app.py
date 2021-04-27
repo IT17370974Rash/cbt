@@ -50,14 +50,24 @@ def home():
     if request.method == 'POST':
         word = request.form.get('word')
 
+        activity_list = []
         input_text = word.strip().lower()
         encoded_text = tokenizer.texts_to_sequences([input_text])[0]
         pad_encoded = pad_sequences([encoded_text], maxlen=4, truncating='pre')
-        print(encoded_text, pad_encoded)
+        #print(encoded_text, pad_encoded)
         for i in (model.predict(pad_encoded)[0]).argsort()[-6:][::-1]:
             pred_word = tokenizer.index_word[i]
-            print(i)
-            print("Next activity suggestion:",pred_word)
+            activity_list.append(pred_word)
+            ##print("Next activity suggestion:",pred_word)
+
+        return render_template('result.html',
+        aa=activity_list[0],
+        ab=activity_list[1],
+        ac=activity_list[2],
+        ad=activity_list[3],
+        ae=activity_list[4],
+        af=activity_list[5])
+
 
     return render_template("home.html")
     
