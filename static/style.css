@@ -14,13 +14,14 @@ input[type=text] {
   }
 
   body {
-    background-color: burlywood;
+    background-color: rgb(135, 205, 222);
   }
 
   div.container {
     background-color: white;
     margin-top: 100px;
-    margin-left: 100px;
+    margin-left: auto;
+    margin-right: auto;
     height: 50%;
     width: 50%;
     padding: 25px;
