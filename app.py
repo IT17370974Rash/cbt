@@ -71,7 +71,7 @@ def home():
         af=activity_list[5])
 
 
-    return render_template("home.html")
+    return render_template("activites.html")
     
 if __name__ == "__main__":
     init()
